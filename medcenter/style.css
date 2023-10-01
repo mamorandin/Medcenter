@@ -8,11 +8,12 @@ body {
     margin: 0;
     padding: 0;
 }
+::selection {
+    background-color: darkkhaki;
+}
 
 header{
-    position: fixed;
     display: flex;
-    z-index: 1;
     justify-content: center;
     background-color: #fff;
     height: 120px;
@@ -284,6 +285,10 @@ footer {
     display: flex;
 }
 
+.footer_menu a {
+    text-decoration: none;
+}
+
 .fm_1,
 .fm_2,
 .fm_3 {
@@ -390,6 +395,20 @@ azul {
     color: #39aae1;
 }
 
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.mm_line {
+    height: 4px;
+    background-color: #39aae1;
+}
+
 @media (max-width:850px) {
 
     .banner_headline {
@@ -407,5 +426,57 @@ azul {
     .banner_options {
         height: auto;
         flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    #geral section,
+    #geral aside {
+        padding: 20px;
+    }
+
+    .footer_menu {
+        flex-direction: column;
+    }
+
+    .footer_area {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer_copy {
+        padding-left: 20px;
+    }
+
+    header .container {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #FFF;
+    }
+
+    header {
+        height: auto;
+    }
+    .logo {
+        padding-left: 20px;
+    }
+
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .square {
+        flex: 1;
     }
 }
